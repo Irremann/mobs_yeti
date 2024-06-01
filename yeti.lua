@@ -101,29 +101,4 @@ end
 
 mobs:register_egg("mobs_yeti:yeti", ("Yeti"), "ayeti.png")
 
-mobs:register_arrow("livingcavesmobs:iceball", {
-	visual = "sprite",
-	visual_size = {x=.5, y=.5},
-	textures = {"livingcavesmobs_iceball.png"},
-	velocity = 12,
-	drop = true,
-
-	hit_player = function(self, player)
-		player:punch(self.object, 1.0, {
-		full_punch_interval=1.0,
-		damage_groups = {fleshy=13},
-		}, nil)
-	end,
-
-	hit_mob = function(self, player)
-		player:punch(self.object, 1.0, {
-		full_punch_interval=1.0,
-		damage_groups = {fleshy=13},
-		}, nil)
-	end,
-
-	hit_node = function(self, pos, node)
-	end,
-})
-
 
